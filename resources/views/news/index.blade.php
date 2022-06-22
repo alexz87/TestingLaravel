@@ -1,9 +1,11 @@
 @extends('layout.main')
 
 @section('page-title')
-    Головна сторінка
+    Новини
 @endsection
 
 @section('content')
-    
+    <div>
+        
+    </div>
 @endsection
