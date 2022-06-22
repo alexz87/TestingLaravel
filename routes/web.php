@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 Route::get('/news', 'NewsController@index');
+Route::get('/news/{id}', 'NewsController@show');

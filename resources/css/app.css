@@ -236,6 +236,25 @@ body {
 .d-flex {display: flex}
 .row {flex-direction: row}
 .col {flex-direction: column}
+.col-3 {
+	width: 100%;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+.col-1 {
+	display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 100px;
+  grid-template-areas:
+    "a a a"
+    "a a a";
+  align-items: start;
+}
+.itm {grid-area: a}
+
 .justify-between {justify-content: space-between}
 .justify-evenly {justify-content: space-evenly}
 .justify-around {justify-content: space-around}
