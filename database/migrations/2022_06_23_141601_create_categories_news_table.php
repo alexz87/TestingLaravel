@@ -19,6 +19,7 @@ class CreateCategoriesNewsTable extends Migration
             $table->string('title');
             $table->string('date');
             $table->mediumText('announce');
+            $table->foreignId('categories_id')->constrained();
         });
     }
 
