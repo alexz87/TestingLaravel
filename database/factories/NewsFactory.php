@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory as Faker;
 
 class NewsFactory extends Factory
 {
@@ -13,8 +14,10 @@ class NewsFactory extends Factory
      */
     public function definition()
     {
+        $faker = Faker::create('uk_UA');
+
         return [
-            //
+            'news' => $faker->text(10)
         ];
     }
 }

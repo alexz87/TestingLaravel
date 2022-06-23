@@ -23,8 +23,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{categories}', [CategoriesController::class, 'index']);
 Route::get('/news/{categories}/{id}', [CategoriesController::class, 'show']);
-
-// Route::apiResources([
-//     'categories' => CategoriesController::class,
-//     'categories/news' => CategoriesNewsController::class
-// ]);

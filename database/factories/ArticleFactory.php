@@ -13,8 +13,13 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $faker = Faker::create('uk_UA');
+        
         return [
-            //
+            'img' => 'img_'.rand(1, 7).'.jpg',
+            'title' => $faker->text(10),
+            'text' => $faker->text(200, 1000),
+            'categories_id' => rand(1, 20)
         ];
     }
 }
