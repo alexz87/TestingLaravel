@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/news/{categories}', [CategoriesController::class, 'index']);
+Route::get('/news/{categories}/{id}', [CategoriesController::class, 'show']);
+
+// Route::apiResources([
+//     'categories' => CategoriesController::class,
+//     'categories/news' => CategoriesNewsController::class
+// ]);
