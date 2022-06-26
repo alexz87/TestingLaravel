@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{categories}', [CategoriesController::class, 'index']);
-Route::get('/news/{categories}/{id}', [CategoriesController::class, 'show']);
+Route::get('/news', [CategoriesController::class, 'index']);
+Route::get('/news/{categories}', [NewsController::class, 'index']);
+Route::get('/news/{categories}/{id}', [NewsController::class, 'show']);

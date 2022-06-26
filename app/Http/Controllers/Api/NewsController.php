@@ -13,9 +13,9 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($categories)
     {
-        return News::all();
+        return News::where('categories_id', $categories)->get();
     }
 
     /**
@@ -37,7 +37,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        return Article::find($id);
     }
 
     /**

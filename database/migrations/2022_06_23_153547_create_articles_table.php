@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('img');
             $table->string('title');
             $table->longText('text');
-            $table->foreignId('categories_id')->constrained();
+            $table->foreignId('news_id')->constrained();
         });
     }
 

@@ -15,11 +15,7 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('img');
-            $table->string('title');
-            $table->string('date');
-            $table->mediumText('announce');
-            $table->foreignId('news_id')->constrained();
+            $table->string('categories');
         });
     }
 
